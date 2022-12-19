@@ -1,0 +1,68 @@
+<div class="container center">
+    <p class="h4">Registro de nuevo usuario</p>
+    <form [formGroup]="formCreateUser">
+        <div class="row">
+
+            <div class="col-6">
+                <label for="name">Nombre</label>
+                <div class="form-label">
+                    <input class="form-control" placeholder="Nombre" id="name" formControlName="name"
+                        [class.is-invalid]="
+                    formCreateUser.get('name')?.touched &&
+                    formCreateUser.get('name')?.invalid">
+                </div>
+            </div>
+
+            <div class="col-6">
+                <label for="lastName">Apellido</label>
+                <div class="form-label">
+                    <input class="form-control" placeholder="Apellido" id="lastName" formControlName="lastName"
+                        [class.is-invalid]="
+                formCreateUser.get('lastName')?.touched &&
+                formCreateUser.get('lastName')?.invalid">
+                </div>
+            </div>
+
+            <div class="col-6">
+                <label for="idType">Tipo de Identificación</label>
+                <div class="form-label">
+                    <input class="form-control " placeholder="Tipo de Identificación" id="idType"
+                        formControlName="idType" [class.is-invalid]="
+                    formCreateUser.get('idType')?.touched &&
+                    formCreateUser.get('idType')?.invalid">
+                </div>
+            </div>
+
+            <div class="col-6">
+                <label for="idNumber">Numero de Identificación</label>
+                <div class="form-label">
+                    <input class="form-control" placeholder="Numero de Identificación" id="idNumber"
+                        formControlName="idNumber" [class.is-invalid]="
+                formCreateUser.get('idNumber')?.touched &&
+                formCreateUser.get('idNumber')?.invalid">
+                </div>
+            </div>
+
+            <div class="col-6">
+                <label for="dateAdmission">Fecha de Ingreso</label>
+                <div class="form-label">
+                    <input class="form-control" type="date" placeholder="dd/mm/aaaa" id="dateAdmission"
+                        formControlName="dateAdmission" [class.is-invalid]="
+                formCreateUser.get('dateAdmission')?.touched &&
+                formCreateUser.get('dateAdmission')?.invalid">
+                </div>
+            </div>
+
+            <div class="col-6">
+                <label for="assignedDevice">Dispositivo Asignado</label>
+                <div class="form-label">
+                    <input class="form-control" placeholder="Dispositivo asignado" id="assignedDevice">
+                </div>
+            </div>
+
+            <div class="button col-2">
+                <button (click)="send()" [disabled]="!formCreateUser.valid">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>

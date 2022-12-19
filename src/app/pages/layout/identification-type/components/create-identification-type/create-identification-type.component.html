@@ -1,0 +1,35 @@
+<div>
+    <form [formGroup]="identificationForm" (ngSubmit)="send()" autocomplete="off">
+        <header class="tittle">
+            <h2>Agregar Tipo de identificación</h2>
+        </header>
+        <div class="row">
+            <div class="col-12">
+                <label for="idtype">Tipo</label>
+                <div class="form-label">
+                    <input
+                        id="idtype"
+                        class="form-control"
+                        placeholder="idtype"
+                        formControlName="idtype"
+                        [class.is-invalid]="identificationForm.get('idtype')?.touched && identificationForm.get('idtype')?.invalid">
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="description">Descripción</label>
+                <div class="form-label">
+                    <input
+                        id="description"
+                        class="form-control"
+                        placeholder="Descripción"
+                        formControlName="description"
+                        [class.is-in valid]="identificationForm.get('description')?.touched && identificationForm.get('description')?.invalid">
+                </div>
+            </div>
+            <div class="button col-2">
+                <button type="submit" [disabled]="identificationForm.invalid">Guardar</button>
+                <button (click)="close()">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</div>

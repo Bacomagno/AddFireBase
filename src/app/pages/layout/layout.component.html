@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-5 col-xl-2 px-sm-4 px-0 bg-primary">
+            <div class=" align-items-sm-start px-5 pt-5 text-white min-vh-100">
+              <div class="">
+              <a href="/" class="d-flex align-items-center pb-3 mb-md-5 me-md-auto text-white text-decoration-none">
+                    <span class="fs-3 d-none d-sm-inline">Menu</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-2 align-items-center align-items-sm-start" id="menu">
+
+                  <li class="nav-item">
+                        <a routerLink="/users/list" class="p-0 mb-2 bg-primary text-white align-middle px-8">
+                            <i class="fs-1 bi-house"></i>
+                            <span class="ms-1 d-none d-sm-inline">Usuarios</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a routerLink="/device/list" class="p-0 mb-2 bg-primary text-white align-middle px-8">
+                            <i class="fs-1 bi-table"></i>
+                            <span class="ms-1 d-none d-sm-inline">Productos</span></a>
+                    </li>
+
+                    <li>
+                      <a routerLink="/identificationType/list" class="p-0 mb-2 bg-primary text-white align-middle px-8">
+                        <i class="fs-1 bi-table"></i>
+                        <span class="ms-1 d-none d-sm-inline">Tipo de identificación</span>
+                      </a>
+                    </li>
+
+                  </ul>
+                <hr>
+                <div class="dropdown pb-9">
+                  <div class="mt-9"></div>
+                  <!-- <button type="button" class="btn btn-secondary px-4 mb-4" (click)="login()" >Cerrar</button> -->
+                  </div>
+
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="col py-3">
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+    </div>
+
+
+
